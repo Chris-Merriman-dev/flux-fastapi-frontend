@@ -1,0 +1,131 @@
+{
+  "6": {
+    "inputs": {
+      "text": "A high-contrast cinematic composition. Structural references. The Scene: Heavy blast doors slowly swing ajar, creaking on worn hinges, revealing a dimly lit hallway with rusted copper pipes that reflect the flickering light of cold blue fluorescent lights overhead. Cracks in the concrete floor contain oily puddles that cast distorted reflections across peeling industrial paint and exposed wiring. Deep within the corridor, a single red emergency light spins slowly, casting an eerie rhythmic crimson glow against a tangled web of wires. No signs of recent human presence exist in this abandoned section of the station; only the steady hum of ventilation echoes through the metallic expanse. Environment: In sharp focus, harsh contrasts bring out every nook and cranny, accentuating weathered textures on rusting pipes, industrial equipment, and concrete walls, underlit by cold blue fluorescent lights that cast flickering shadows across the space. The lone red emergency light casts an intense crimson glow over a vast expanse of dusty metal grating. Shadows dance across peeling paint and rough-hewn machinery. Ambient lighting simulates 90-degree angle camera views for maximum impact in sharp, crisp clarity. High-detail textures show every rusted bolt and dented surface, creating depth without compromising image fidelity.",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "31",
+        0
+      ],
+      "vae": [
+        "30",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "27": {
+    "inputs": {
+      "width": 1280,
+      "height": 720,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "30": {
+    "inputs": {
+      "ckpt_name": "flux1-schnell-fp8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "31": {
+    "inputs": {
+      "seed": 942720877785712,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "30",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "33",
+        0
+      ],
+      "latent_image": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "33": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "39": {
+    "inputs": {
+      "anything": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "Clean VRAM Used"
+    }
+  },
+  "40": {
+    "inputs": {
+      "anything": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "easy clearCacheAll",
+    "_meta": {
+      "title": "Clear Cache All"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "1": {
+    "inputs": {
+      "anything": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "Clean VRAM Used"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image": "ComfyUI_00034_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "3": {
+    "inputs": {
+      "anything": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "easy clearCacheAll",
+    "_meta": {
+      "title": "Clear Cache All"
+    }
+  }
+}

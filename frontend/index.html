@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flux .1 Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div id="server-status-bar" class="status-offline">
+        Server Status: <span id="status-text">Checking...</span>
+    </div>
+
+    <h2>Flux .1 Generator</h2>
+    <textarea id="promptInput" placeholder="Enter your detailed prompt here..."></textarea>
+    <button id="generateBtn" disabled>Generate Image</button>
+
+    <div id="status-area"></div>
+
+    <div id="history-container">
+        <h3>Generated History</h3>
+        <div id="history-scrollbox">
+            </div>
+    </div>
+
+    <div id="main-result-area">
+        <img id="image-display" src="" alt="Generated Result">
+        <button id="mainDownloadBtn" class="download-btn-main" style="display: none;">💾 Download High-Res</button>
+    </div>
+
+    
+</div>
+
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-wrapper">
+        <img class="modal-content" id="imgFull">
+    </div>
+    <div id="caption">Scroll to Zoom • Drag to Pan</div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
