@@ -16,8 +16,8 @@ The goal of this application is to provide a professional-grade "control center"
 ### Frontend
 * **Web Standard:** HTML5, CSS3, Vanilla JavaScript (ES6+).
 * **Key Features:** * **Advanced Modal:** Smooth mouse-wheel zoom and click-and-drag panning for detail inspection.
-    * **History Gallery:** A dedicated scrollbox to preview and swap between previous generations.
-    * **Live Status:** Real-time server health monitoring (Online/Busy/Offline).
+* **History Gallery:** A dedicated scrollbox to preview and swap between previous generations.
+* **Live Status:** Real-time server health monitoring (Online/Busy/Offline).
 
 ### Backend
 * **FastAPI:** Python-based API layer for ultra-fast request handling.
@@ -65,11 +65,11 @@ The frontend is built with vanilla web technologies. You can:
 
 ## 📖 File Structure
 
-index.html               # Main UI layout and structure  
-styles.css               # Visual styling for the workbench, gallery, and modal  
-main.js                  # API calls, zoom/pan logic, and UI state management  
-main.py                  # FastAPI server and ComfyUI integration bridge  
-flux_image_creation.py   # Handle the creation of flux images  
-wan22_handlers_async.py  # Handles calls to ComfyUI for flux image creation  
-requirements.txt         # List of Python dependencies (fastapi, uvicorn, etc.)  
-README.md                # Project documentation
+* **index.html** - Main UI layout and structure
+* **styles.css** - Visual styling for the workbench, gallery, and modal
+* **main.js** - API calls, zoom/pan logic, and UI state management
+* **main.py** - FastAPI server and ComfyUI integration bridge
+* **flux_image_creation.py** - Handle the creation of flux images
+* **wan22_handlers_async.py** - Handles calls to ComfyUI for flux image creation
+* **requirements.txt** - List of Python dependencies (fastapi, uvicorn, etc.)
+* **README.md** - Project documentation
