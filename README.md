@@ -77,9 +77,11 @@ The frontend is built with vanilla web technologies. You can:
 
 ## 📖 File Structure
 
-├── index.html          # Main UI layout and structure
-├── styles.css          # Visual styling for the workbench, gallery, and modal
-├── main.js             # API calls, zoom/pan logic, and UI state management
-├── main.py             # FastAPI server and ComfyUI integration bridge
-├── requirements.txt    # List of Python dependencies (fastapi, uvicorn, etc.)
-└── README.md           # Project documentation
+index.html              # Main UI layout and structure
+styles.css              # Visual styling for the workbench, gallery, and modal
+main.js                 # API calls, zoom/pan logic, and UI state management
+main.py                 # FastAPI server and ComfyUI integration bridge
+flux_image_creation.py  # Handle the creation of flux images
+wan22_handlers_async.py # Handles calls to ComfyUI for flux image creation
+requirements.txt        # List of Python dependencies (fastapi, uvicorn, etc.)
+README.md               # Project documentation
