@@ -2,6 +2,8 @@
 
 Purpose : Used to create Flux Image
 
+Make sure you update directories for your own ComfyUI directory and other directories as needed.
+
 """
 import time
 from wan22_handler_async import Wan22_Handler
