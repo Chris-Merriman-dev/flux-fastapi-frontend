@@ -21,7 +21,7 @@ The goal of this application is to provide a professional-grade "control center"
 
 ### Backend
 * **FastAPI:** Python-based API layer for ultra-fast request handling.
-* **Uvicorn:** ASGI server for production-ready performance.
+* **Uvicorn:** ASGI server for production-ready performance (Running internally via main.py).
 * **ComfyUI Bridge:** Connects to ComfyUI's API/WebSocket to execute Flux workflows.
 
 ## 📋 Prerequisites
@@ -45,10 +45,10 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 ### 2. Run the Server
-Start the FastAPI backend using Uvicorn. The --reload flag is useful for development as it restarts the server when you change your Python code:
+The FastAPI backend is configured to run Uvicorn internally. Simply execute the main script to start the server:
 
 # Command to run the server
-uvicorn main:app --reload
+python backend/main.py
 
 ### 3. Launch the Frontend
 The frontend is built with vanilla web technologies. You can:
@@ -65,13 +65,13 @@ The frontend is built with vanilla web technologies. You can:
 
 ## 📖 File Structure
 
-* **frontend\index.html** - Main UI layout and structure
-* **frontend\styles.css** - Visual styling for the workbench, gallery, and modal
-* **frontend\main.js** - API calls, zoom/pan logic, and UI state management
-* **backend\main.py** - FastAPI server and ComfyUI integration bridge
-* **backend\flux_image_creation.py** - Handle the creation of flux images
-* **backend\wan22_handlers_async.py** - Handles calls to ComfyUI for flux image creation
-* **files\free_mem_API_1.json** - Json file used to communicate to ComfyUI to clear vram
-* **files\Flux_No_Image_APP_1_API_1.json** - Json file used to communicate to ComfyUI to create our Flux .1 image
-* **requirements.txt** - List of Python dependencies (fastapi, uvicorn, etc.)
+* **frontend\index.html** - Main UI layout and structure  
+* **frontend\styles.css** - Visual styling for the workbench, gallery, and modal  
+* **frontend\main.js** - API calls, zoom/pan logic, and UI state management  
+* **backend\main.py** - FastAPI server and ComfyUI integration bridge  
+* **backend\flux_image_creation.py** - Handle the creation of flux images  
+* **backend\wan22_handlers_async.py** - Handles calls to ComfyUI for flux image creation  
+* **files\free_mem_API_1.json** - Json file used to communicate to ComfyUI to clear vram  
+* **files\Flux_No_Image_APP_1_API_1.json** - Json file used to communicate to ComfyUI to create our Flux .1 image  
+* **requirements.txt** - List of Python dependencies (fastapi, uvicorn, etc.)  
 * **README.md** - Project documentation
