@@ -77,6 +77,7 @@ The frontend is built with vanilla web technologies. You can:
 
 ## 📖 File Structure
 
+```text
 index.html              # Main UI layout and structure
 styles.css              # Visual styling for the workbench, gallery, and modal
 main.js                 # API calls, zoom/pan logic, and UI state management
